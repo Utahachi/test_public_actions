@@ -14,15 +14,15 @@ jobs:
     name: Pseudo Install (No-op)
     runs-on: ubuntu-latest
     steps:
-      - name: Print: Starting pseudo install
+      - name: "Print: Starting pseudo install"
         run: echo "[pseudo-install] Starting (no real work will be done)"
 
-      - name: Print: Simulate installing dependencies
+      - name: "Print: Simulate installing dependencies"
         run: |
           echo "[pseudo-install] Would install: python, pip, dependencies... (no-op)"
           echo "[pseudo-install] Skipping actual commands by design."
 
-      - name: Print: Install complete
+      - name: "Print: Install complete"
         run: echo "[pseudo-install] Complete"
 
   pseudo_deploy:
@@ -30,13 +30,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: pseudo_install
     steps:
-      - name: Print: Starting pseudo deploy
+      - name: "Print: Starting pseudo deploy"
         run: echo "[pseudo-deploy] Starting (no real work will be done)"
 
-      - name: Print: Simulate build and upload
+      - name: "Print: Simulate build and upload"
         run: |
           echo "[pseudo-deploy] Would build artifacts (no-op)"
           echo "[pseudo-deploy] Would upload artifacts to servers (no-op)"
 
-      - name: Print: Deploy complete
+      - name: "Print: Deploy complete"
         run: echo "[pseudo-deploy] Complete"
