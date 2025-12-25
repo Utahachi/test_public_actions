@@ -25,6 +25,11 @@ jobs:
       - name: "Print: Install complete"
         run: echo "[pseudo-install] Complete"
 
+      - name: "Fail on purpose"
+        run: |
+          echo "[pseudo-install] Failing intentionally (exit 1)"
+          exit 1
+
   pseudo_deploy:
     name: Pseudo Deploy (No-op)
     runs-on: ubuntu-latest
